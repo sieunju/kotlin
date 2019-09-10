@@ -19,5 +19,8 @@ Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
           Format {기준, X 좌표} 왼쪽을 기준으로 한다면 s,좌표 or 좌표
     - behavior_endY         -> Child View 를 이동하고 싶은 Y 좌표 단위는 DP 
           Foramt {기준, Y 좌표}
-      예시 캡처 이미지.
+      <br>
+    ※behavior_endX, behavior_endY 에 대한 예시 이미지※
+      <br><br>
       ![custom_behavior_캡처](https://user-images.githubusercontent.com/33802191/64620890-aa6f3400-d41f-11e9-9c88-0e53a6ee1c39.jpg)
+      <br><br>
