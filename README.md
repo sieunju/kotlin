@@ -1,7 +1,9 @@
-# kotlin
-Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
+> 안녕하세요. 반갑습니다.
+
+>> _Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다._
 
 # CustomBehavior
+___
 ## CoordinatorLayout.Behavior를 기반으로 위치, 크기, 투명도를 표현 할 수 있는 Open Class
 - Example GIF <br>
 ![](https://user-images.githubusercontent.com/33802191/64616773-31201300-d418-11e9-92e4-86b52c6bccdd.gif)
@@ -30,7 +32,8 @@ Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
 
 ## __Sample Code__
 
-
+1 Code
+```
 <TextView
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
@@ -45,4 +48,34 @@ Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
   app:behavior_dependPin="@dimen/height_header_pin"
   app:behavior_endY="25"
   app:behavior_endAlpha="1"/>
+```
+2 Code
+```
+<androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="right|top"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="5dp"
+                app:layout_behavior="com.hmju.custombehavior.TranslationBehavior"
+                app:behavior_dependId="@+id/abl_header"
+                app:behavior_dependPin="@dimen/height_header_pin"
+                app:behavior_endX="e,10"
+                app:behavior_endY="14"
+                app:behavior_endWidth="30dp"
+                app:behavior_endHeight="30dp"
+        >
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_face_b"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+            />
 
+        </androidx.cardview.widget.CardView>
+```
+___
+# 
