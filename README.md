@@ -3,7 +3,7 @@
 >> _Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다._
 
 # CustomBehavior
-___
+
 ## __Description__
 >> CoordinatorLayout.Behavior를 기반으로 위치, 크기, 투명도를 표현 할 수 있는 라이브러리 입니다.
 - Example GIF <br>
@@ -12,7 +12,7 @@ ___
 ## __HOW TO__
 
   ###### _※xml에서 TranslationBehavior Attribute 사용시\'tools:ignore="missingPrefix"\' 를 선언해주시길 바랍니다.※_
-  ---
+  
   - <b>attrs.xml</b> 파일에 속성에 대한 정의가 명시 되어 있고, 좀더 부연 설명을 하자면.
     - behavior_dependId     -> Dependency View의 Id값을 입력합니다.
     - behavior_dependType   -> Dependency 스크롤 타입입니다. 기본 값은 수직.
@@ -78,5 +78,6 @@ ___
 
         </androidx.cardview.widget.CardView>
 ```
-___
-# 
+
+
+# Next..?
