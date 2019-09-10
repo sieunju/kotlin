@@ -31,7 +31,7 @@ Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
     
 ## __Sample Code__
 
-\'        
+\'    
 <androidx.cardview.widget.CardView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -46,15 +46,5 @@ Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
                 app:behavior_endX="e,10"
                 app:behavior_endY="14"
                 app:behavior_endWidth="30dp"
-                app:behavior_endHeight="30dp"
-        >
-            
-            <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/icon_face_b"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-            />
-</androidx.cardview.widget.CardView>
+                app:behavior_endHeight="30dp"/>
 \'
