@@ -30,7 +30,7 @@ Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
 
 ## __Sample Code__
 
-\'
+
 <TextView
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
@@ -45,4 +45,4 @@ Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
   app:behavior_dependPin="@dimen/height_header_pin"
   app:behavior_endY="25"
   app:behavior_endAlpha="1"/>
-\'
+
