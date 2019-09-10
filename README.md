@@ -32,18 +32,17 @@ Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
 
 \'
 <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="0"
-                android:text="Hello hmJu"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:layout_marginLeft="5dp"
-                android:elevation="5dp"
-                app:layout_behavior="com.hmju.custombehavior.TranslationBehavior"
-                app:behavior_dependId="@+id/abl_header"
-                app:behavior_dependPin="@dimen/height_header_pin"
-                app:behavior_endY="25"
-                app:behavior_endAlpha="1"
-        />
-        \'
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:alpha="0"
+  android:text="Hello hmJu"
+  android:textColor="#FFFFFF"
+  android:textSize="15sp"
+  android:layout_marginLeft="5dp"
+  android:elevation="5dp"
+  app:layout_behavior="com.hmju.custombehavior.TranslationBehavior"
+  app:behavior_dependId="@+id/abl_header"
+  app:behavior_dependPin="@dimen/height_header_pin"
+  app:behavior_endY="25"
+  app:behavior_endAlpha="1"/>
+\'
