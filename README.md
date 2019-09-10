@@ -45,4 +45,5 @@ Visual 적인 요소들을 만들어 놓은 Kotlin Library 입니다.
                 app:behavior_dependPin="@dimen/height_header_pin"
                 app:behavior_endY="25"
                 app:behavior_endAlpha="1"
-        />\'
+        />
+        \'
