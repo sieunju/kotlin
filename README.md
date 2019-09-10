@@ -4,7 +4,8 @@
 
 # CustomBehavior
 ___
-## CoordinatorLayout.Behavior를 기반으로 위치, 크기, 투명도를 표현 할 수 있는 Open Class
+## __Description__
+>> CoordinatorLayout.Behavior를 기반으로 위치, 크기, 투명도를 표현 할 수 있는 라이브러리 입니다.
 - Example GIF <br>
 ![](https://user-images.githubusercontent.com/33802191/64616773-31201300-d418-11e9-92e4-86b52c6bccdd.gif)
 
