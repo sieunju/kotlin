@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- [s] ParallaxViewHolder 관련련 -->
+    <dimen name="parallax_height_title_bottom">30dp</dimen>
+    <dimen name="parallax_height_min">50dp</dimen>
+    <dimen name="parallax_height_max">120dp</dimen>
+    <!-- [e] ParallaxViewHolder 관련련 -->
+</resources>

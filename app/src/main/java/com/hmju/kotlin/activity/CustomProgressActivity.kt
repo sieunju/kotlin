@@ -23,7 +23,6 @@ class CustomProgressActivity : AppCompatActivity() , View.OnClickListener{
         setContentView(R.layout.activity_custom_progress)
 
         findViewById<TextView>(R.id.tv_status).setOnClickListener(this)
-
     }
 
     override fun onClick(v: View?) {
