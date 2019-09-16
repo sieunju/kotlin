@@ -32,7 +32,7 @@
 ![custom_behavior_캡처](https://user-images.githubusercontent.com/33802191/64620890-aa6f3400-d41f-11e9-9c88-0e53a6ee1c39.jpg)
 
 ## __Sample Code__
->> 이해를 돕기 위해 Dimens, Colors에 대한 값은 웬만해선 하드코딩하였습니다.
+###### _※이해를 돕기 위해 Dimens, Colors에 대한 값은 웬만해선 하드코딩하였습니다.※_
 1 Code
 ```
 <TextView
