@@ -112,7 +112,7 @@
     default 0
     
 ## __Sample Code__
->> 이해를 돕기 위해 Dimens, Colors에 대한 값은 하드코딩하였습니다.
+###### _※이해를 돕기 위해 Dimens, Colors에 대한 값은 웬만해선 하드코딩하였습니다.※_
 1. Horizontal Type
 ```
 <com.hmju.customprogressview.CustomProgressView
