@@ -80,4 +80,19 @@
 ```
 
 
-# Next..?
+# CustomProgressView
+
+## __Description__
+>> 기존 ProgressBar를 이용하여 진행률을 노출할때 실시간으로 setProgress , incrementProgressBy를 이용하여 표현하기에는 제한 사항이
+많았습니다. 좀 더 자연스러운 표현을 위한 SurfaceView 기반의 클래스 입니다.
+- Example GIF HorizonTal Type
+ ![kotlinStudy_2019-09-16-13-27-54_1_1](https://user-images.githubusercontent.com/33802191/64937883-f6dec780-d896-11e9-8ab6-d676f6cb7b18.gif)
+
+- Example GIF Vertical Type
+![kotlinStudy_2019-09-16-13-13-13_1_1](https://user-images.githubusercontent.com/33802191/64937888-fa724e80-d896-11e9-849a-4412ddd8a64e.gif)
+
+
+## __HOW TO__
+
+
+## __Sample Code__
