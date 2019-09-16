@@ -32,7 +32,7 @@
 ![custom_behavior_캡처](https://user-images.githubusercontent.com/33802191/64620890-aa6f3400-d41f-11e9-9c88-0e53a6ee1c39.jpg)
 
 ## __Sample Code__
-
+>> 이해를 돕기 위해 Dimens, Colors에 대한 값은 웬만해선 하드코딩하였습니다.
 1 Code
 ```
 <TextView
@@ -91,9 +91,69 @@
 - Example GIF Vertical Type <br>
 ![kotlinStudy_2019-09-16-13-27-54_1](https://user-images.githubusercontent.com/33802191/64938324-7751f800-d898-11e9-9309-62d0f46fa420.gif)
 
-
-
 ## __HOW TO__
-
-
+  CustomProgressView Module > res > values > attrs.xml
+  - <b>attrs.xml</b> 파일에 속성에 대한 정의가 명시 되어 있고, 좀더 부연 설명을 하자면.
+    - type -> 수평,수직으로 표현 할거에 대한 속성값       
+    default 수평
+    - gradientRadius -> View의 각 모서리에 대한 각도값 
+    default 0
+    - gradientStartColor -> View의 Gradient를 표현하기 위한 StartColor 
+    default Black
+    - gradientCenterColor -> View의 Gradient를 표현하기 위한 CenterColor 
+    default Black
+    - gradientEndColor -> View의 Gradient를 표현하기 위한 EndColor 
+    default Black
+    - bgColor -> View의 Background Color 
+    default Black
+    - max -> View의 진행률을 노출하고 싶은 최대값 ex.) 0 ~ 100 까지 노출하고 싶다 -> 100 , 0~ 500 까지 노출하고싶다 -> 500 
+    default 100
+    - min -> View의 첫 시작 진행률에 대한 값 ex.) 20 ~ Max로 노출하고싶다. -> 20
+    default 0
+    
 ## __Sample Code__
+>> 이해를 돕기 위해 Dimens, Colors에 대한 값은 하드코딩하였습니다.
+1. Horizontal Type
+```
+<com.hmju.customprogressview.CustomProgressView
+            android:id="@+id/v_progress"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:bgColor="#e4e4e4"
+            app:gradientStartColor="#FF0000"
+            app:gradientCenterColor="#FF00FD"
+            app:gradientEndColor="#0045FF"
+            app:gradientLocation="0.3"
+            app:gradientRadius="15dp"
+            app:max="500"
+            app:type="horizontal"
+    />
+```
+2. Vertical Type
+```
+<com.hmju.customprogressview.CustomProgressView
+            android:id="@+id/v_progress"
+            android:layout_width="30dp"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:bgColor="#e4e4e4"
+            app:gradientStartColor="#FF0000"
+            app:gradientCenterColor="#FF00FD"
+            app:gradientEndColor="#0045FF"
+            app:gradientLocation="0.3"
+            app:gradientRadius="15dp"
+            app:max="500"
+            app:type="vertical"
+    />
+```
+
+# Next...?
