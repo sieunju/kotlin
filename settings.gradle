@@ -1,1 +1,1 @@
-include ':app', ':custombehavior'
+include ':app', ':custombehavior', ':customprogressview'

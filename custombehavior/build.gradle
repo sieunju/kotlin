@@ -38,3 +38,8 @@ dependencies {
 
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.sieunju'
+version = '1.0.0'
+
+repositories{
+    mavenCentral()
+}
