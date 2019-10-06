@@ -8,12 +8,12 @@ import com.hmju.parallaxviewholder.ParallaxViewHolder
 
 /**
  * kotlinStudy
- * Class: FruitAdapter
+ * Class: DumpAdapter
  * Created by jsieu on 2019-07-14.
  *
  * Description:
  */
-class FruitAdapter(context: Context) : BaseAdapter(context) {
+class DumpAdapter(context: Context) : BaseAdapter(context) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<*> {
         return when (viewType) {

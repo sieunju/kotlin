@@ -7,6 +7,13 @@ import android.widget.TextView
 import com.hmju.customprogressview.CustomProgressView
 import com.hmju.kotlin.R
 
+/**
+ * kotlin_github_branch
+ * Class: CustomProgressActivity
+ * Created by jsieu on 2019-09-17.
+ *
+ * Description: CustomProgressActivity Test Activity class
+ */
 class CustomProgressActivity : AppCompatActivity() , View.OnClickListener{
 
     private val mProgressBar : CustomProgressView by lazy { findViewById<CustomProgressView>(R.id.v_progress) }
