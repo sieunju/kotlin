@@ -18,7 +18,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/temp_img4"/>
+                android:src="@drawable/temp_img1"/>
 
         <!-- 가운데 영역 -->
         <androidx.constraintlayout.widget.ConstraintLayout
