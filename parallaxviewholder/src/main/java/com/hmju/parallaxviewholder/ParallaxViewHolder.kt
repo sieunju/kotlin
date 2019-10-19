@@ -34,9 +34,10 @@ class ParallaxViewHolder(itemView: View, private val mViewGroup: ViewGroup) :
     private val mClBottom: ConstraintLayout by lazy { mRootView.findViewById<ConstraintLayout>(R.id.cl_bottom) }
     // 아래 글씨 TextView
     private val mTvBottomTitle: TextView by lazy { mRootView.findViewById<TextView>(R.id.tv_bottom_title) }
-
-    private val mMaxHeight: Float by lazy { mContext.resources.getDimension(R.dimen.parallax_height_max) } // Child ViewHolder Max Height.
-    private val mMinHeight: Float by lazy { mContext.resources.getDimension(R.dimen.parallax_height_min) } // Child ViewHolder Min Height.
+    // Child ViewHolder Max Height.
+    private val mMaxHeight: Float by lazy { mContext.resources.getDimension(R.dimen.parallax_height_max) }
+    // Child ViewHolder Min Height.
+    private val mMinHeight: Float by lazy { mContext.resources.getDimension(R.dimen.parallax_height_min) }
 
     // ViewHolder 높이값을 세팅 해주는 LayoutParams
     private val mLayoutParams: ConstraintLayout.LayoutParams by lazy {
@@ -100,7 +101,7 @@ class ParallaxViewHolder(itemView: View, private val mViewGroup: ViewGroup) :
 
     private fun bindView(data: ParallaxStruct) {
         mTvCenterTitle.text = data.title
-        mTvBottomTitle.text = "Chapter ${data.title}"
+        mTvBottomTitle.text = String.format("Chapter%s",data.title)
     }
 
     /**

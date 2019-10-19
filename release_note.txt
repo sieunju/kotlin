@@ -27,3 +27,4 @@ Branch 1.0.0 삭제..(실수....)
 
 [2019.10.19] 수정사항 - 주홈인
 - ParallaxViewHolder 버그 수정 및 Github 에 올릴 코드 정리.
+- ParallaxViewHolder v1.0.0 추가.
