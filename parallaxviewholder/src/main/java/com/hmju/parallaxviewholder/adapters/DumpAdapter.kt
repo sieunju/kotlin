@@ -9,11 +9,11 @@ import com.hmju.parallaxviewholder.structs.DumpStruct
 import com.hmju.parallaxviewholder.structs.ParallaxStruct
 
 /**
- * kotlinStudy
+ * kotlin_github_branch
  * Class: DumpAdapter
  * Created by jsieu on 2019-07-14.
  *
- * Description:
+ * Description: Parallax ViewHolder 테스트용 DumpAdapter Class
  */
 class DumpAdapter(context: Context) : BaseAdapter(context) {
 

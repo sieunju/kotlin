@@ -12,7 +12,7 @@ import com.hmju.parallaxviewholder.structs.ParallaxStruct
 import java.util.*
 
 /**
- * kotlinStudy
+ * kotlin_github_branch
  * Class: BaseAdapter
  * Created by jsieu on 2019-07-14.
  *
@@ -56,18 +56,19 @@ abstract class BaseAdapter(protected var mContext: Context) :
     }
 
     override fun onViewAttachedToWindow(holder: BaseViewHolder<*>) {
-        // Parallax ViewHolder
-        if (holder is ParallaxViewHolder) {
-            holder.onEnabled()
+        when (holder) {
+            // Parallax ViewHolder
+            is ParallaxViewHolder -> holder.onEnabled()
+            else -> super.onViewAttachedToWindow(holder)
         }
-        super.onViewAttachedToWindow(holder)
+
     }
 
     override fun onViewDetachedFromWindow(holder: BaseViewHolder<*>) {
-        // Parallax ViewHolder
-        if (holder is ParallaxViewHolder) {
-            holder.onDisabled()
+        when (holder) {
+            // Parallax ViewHolder
+            is ParallaxViewHolder -> holder.onDisabled()
+            else -> super.onViewDetachedFromWindow(holder)
         }
-        super.onViewDetachedFromWindow(holder)
     }
 }

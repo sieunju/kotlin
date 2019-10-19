@@ -15,7 +15,7 @@ import com.hmju.parallaxviewholder.structs.ParallaxStruct
  * Class: MainActivity
  * Created by jsieu on 2019-09-17.
  *
- * Description: CustomBehavior Module And ParallaxViewHolder Module Test Activity class
+ * Description: Module Test Activity class
  */
 class MainActivity : AppCompatActivity() {
 

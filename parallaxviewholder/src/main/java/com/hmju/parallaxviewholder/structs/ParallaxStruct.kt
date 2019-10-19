@@ -7,14 +7,13 @@ import java.io.Serializable
  * Class: ParallaxStruct
  * Created by jsieu on 2019-09-16.
  *
- * Description: 테스트용 구조체.
+ * Description: ParallaxViewHolder Struct Class
  */
-class ParallaxStruct : Serializable {
-    var title: String? = null
+class ParallaxStruct(title: String) : Serializable {
+    var title: String? = title
     var comment: String? = null
 
-    constructor(title: String){
-        this.title = title
+    init {
         comment = ""
     }
 }

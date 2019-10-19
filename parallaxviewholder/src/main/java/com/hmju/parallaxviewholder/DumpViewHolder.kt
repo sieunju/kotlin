@@ -11,7 +11,7 @@ import com.hmju.parallaxviewholder.structs.DumpStruct
  * Class: DumpViewHolder
  * Created by jsieu on 2019-09-16.
  *
- * Description: 테스트를 위한 Dump ViewHolder
+ * Description: ParallaxViewHolder 테스트를 위한 Dump ViewHolder Class
  */
 class DumpViewHolder(itemView: View) : BaseViewHolder<DumpStruct>(itemView) {
 
@@ -21,7 +21,8 @@ class DumpViewHolder(itemView: View) : BaseViewHolder<DumpStruct>(itemView) {
     companion object {
 
         fun newInstance(parent: ViewGroup): DumpViewHolder {
-            val view: View = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_dump, parent, false)
+            val view: View = LayoutInflater.from(parent.context)
+                .inflate(R.layout.view_holder_dump, parent, false)
             return DumpViewHolder(view)
         }
     }
