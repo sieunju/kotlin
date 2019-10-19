@@ -5,7 +5,10 @@ package com.hmju.parallaxviewholder.adapters
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import com.hmju.parallaxviewholder.BaseViewHolder
+import com.hmju.parallaxviewholder.DumpViewHolder
 import com.hmju.parallaxviewholder.ParallaxViewHolder
+import com.hmju.parallaxviewholder.structs.DumpStruct
+import com.hmju.parallaxviewholder.structs.ParallaxStruct
 import java.util.*
 
 /**
@@ -15,13 +18,12 @@ import java.util.*
  *
  * Description: BaseAdapter Class
  */
-@Suppress("CAST_NEVER_SUCCEEDS")
-abstract class BaseAdapter(protected var mContext: Context) : RecyclerView.Adapter<BaseViewHolder<*>>() {
+abstract class BaseAdapter(protected var mContext: Context) :
+    RecyclerView.Adapter<BaseViewHolder<*>>() {
 
-    protected var mItems: ArrayList<ItemStruct<*>>? = ArrayList()
-    protected var mSize: Int = 0
+    protected val mItems: ArrayList<ItemStruct<*>> = ArrayList()
 
-    // [s] row type defin
+    // [s] row type define
 
     // [e] row type define
 
@@ -37,20 +39,20 @@ abstract class BaseAdapter(protected var mContext: Context) : RecyclerView.Adapt
 
     @SuppressWarnings("unchecked")
     override fun onBindViewHolder(holder: BaseViewHolder<*>, pos: Int) {
-        holder.run { onBindView(pos,mItems?.get(pos) as Nothing) }
+        val data: Any? = mItems[pos].data
+        when (holder) {
+            is ParallaxViewHolder -> holder.onBindView(pos, data as ParallaxStruct)
+            is DumpViewHolder -> holder.onBindView(pos, data as DumpStruct)
+            else -> throw IllegalArgumentException("Invalid ViewHolder. Add BaseAdapter onBindViewHolder")
+        }
     }
 
     override fun getItemCount(): Int {
-        // Null 값 처리
-        return if (mItems == null) {
-            0
-        } else {
-            mItems!!.size
-        }// Null 값이 아닌경우 Int 절로 size 값을 리턴
+        return mItems.size
     }
 
     override fun getItemViewType(position: Int): Int {
-        return mItems!![position].viewType
+        return mItems[position].viewType
     }
 
     override fun onViewAttachedToWindow(holder: BaseViewHolder<*>) {

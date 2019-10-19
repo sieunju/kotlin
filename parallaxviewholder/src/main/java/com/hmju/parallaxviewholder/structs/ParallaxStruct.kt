@@ -12,4 +12,9 @@ import java.io.Serializable
 class ParallaxStruct : Serializable {
     var title: String? = null
     var comment: String? = null
+
+    constructor(title: String){
+        this.title = title
+        comment = ""
+    }
 }
