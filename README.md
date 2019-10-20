@@ -180,6 +180,6 @@
         (단, R.layout.view_holder_parallax.xml 에서 알맞게 수정 하셔야 합니다.)
 
 ## __Sample Code__
-    해당 라이브러리는 포함되어 있지 않습니다.
+    해당 라이브러리에는 필요로 하지 않습니다.
 
 # Next...?
