@@ -165,8 +165,8 @@
 
 ## __HOW TO__
 
-###### _※ParallaxViewHolder Module 에서 ParallaxViewHolder 만 가져와서 사용자 환경에 맞게 세팅 하시면 되겠습니다.<br>
-나머지 BaseAdapter, BaseViewHolder...은 테스트 영상을 위해서 추가된 클래스입니다.※_
+    ###### _※ParallaxViewHolder Module 에서 ParallaxViewHolder 만 가져와서 사용자 환경에 맞게 세팅 하시면 되겠습니다.<br>
+    나머지 BaseAdapter, BaseViewHolder...은 테스트 영상을 위해서 추가된 클래스입니다.※_
 
     - 각 변수 및 수정 가능한 함수에 대해서 사용법을 알려드립니다.
         - mActionStartPos   사용자가 이 ViewHolder 액션을 취하고 싶은 디바이스 위치 (비율 기준)
