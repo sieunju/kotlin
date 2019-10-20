@@ -160,8 +160,8 @@
 
 ## __Description__
 >> RecyclerView 에서 사용자가 원하는 위치에 따라서 ReDraw 를 표현할수 있는 라이브러리 입니다.
--Example GIF <br>
-![kotlin_parallaxviewholder_2](https://user-images.githubusercontent.com/33802191/67152949-670bbd80-f31b-11e9-87ea-7163f26c187b.gif)
+- Example GIF <br>
+![](https://user-images.githubusercontent.com/33802191/67152949-670bbd80-f31b-11e9-87ea-7163f26c187b.gif)
 
 ## __HOW TO__
 
