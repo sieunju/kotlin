@@ -157,3 +157,26 @@
 ```
 
 # Parallaxviewholder
+
+## __Description__
+>> RecyclerView 에서 사용자가 원하는 위치에 따라서 ReDraw 를 표현할수 있는 라이브러리 입니다.
+- Example GIF <br>
+![](https://user-images.githubusercontent.com/33802191/67152949-670bbd80-f31b-11e9-87ea-7163f26c187b.gif)
+
+## __HOW TO__
+
+##### _※ParallaxViewHolder Module 에서 ParallaxViewHolder 만 가져와서 사용자 환경에 맞게 세팅 하시면 되겠습니다. 나머지 BaseAdapter, BaseViewHolder...은 테스트 영상을 위해서 추가된 클래스입니다.※_
+> 각 변수 및 수정 가능한 함수에 대해서 사용법을 알려드립니다.
+>  - mActionStartPos   사용자가 이 ViewHolder 액션을 취하고 싶은 디바이스 위치 (비율 기준)
+>  - mActionEndPos     사용자가 이 ViewHolder 액션을 끝내고 싶은 디바이스 위치 (비율 기준)
+>  - mMaxHeight        사용자가 표현하고 싶은 최대 View 높이
+>  - mMinHeight        사용자가 표현하고 싶은 최소 View 높이
+>  - onScrollChanged   이 Override 함수에서 동작을 취합니다.
+>      시작 지점에서 끝지점까지 Percentage 로 나타냅니다. (0.0~1.0)
+>  - bindView          사용자 원하는 대로 변경하시면 되겠습니다.
+>  - bindAlpha         이 함수에서 사용자가 나타내고 싶은 Alpha 값을 변경하면 되겠습니다.
+  (단, R.layout.view_holder_parallax.xml 에서 알맞게 수정 하셔야 합니다.)
+## __Sample Code__
+    해당 라이브러리에는 필요로 하지 않습니다.
+
+# Next...?
