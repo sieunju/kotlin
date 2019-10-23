@@ -1,4 +1,4 @@
-package com.hmju.parallaxviewholder
+package com.hmju.parallaxviewholder.viewholders
 
 import android.content.Context
 import android.view.View

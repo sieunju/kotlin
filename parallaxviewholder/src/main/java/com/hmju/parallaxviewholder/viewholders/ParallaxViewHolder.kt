@@ -1,4 +1,4 @@
-package com.hmju.parallaxviewholder
+package com.hmju.parallaxviewholder.viewholders
 
 import android.app.Activity
 import android.graphics.Point
@@ -7,6 +7,7 @@ import android.util.SparseIntArray
 import android.view.*
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.hmju.parallaxviewholder.R
 import com.hmju.parallaxviewholder.structs.ParallaxStruct
 import kotlin.math.abs
 import kotlin.math.ceil

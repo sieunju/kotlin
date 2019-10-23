@@ -4,9 +4,9 @@ package com.hmju.parallaxviewholder.adapters
 
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
-import com.hmju.parallaxviewholder.BaseViewHolder
-import com.hmju.parallaxviewholder.DumpViewHolder
-import com.hmju.parallaxviewholder.ParallaxViewHolder
+import com.hmju.parallaxviewholder.viewholders.BaseViewHolder
+import com.hmju.parallaxviewholder.viewholders.DumpViewHolder
+import com.hmju.parallaxviewholder.viewholders.ParallaxViewHolder
 import com.hmju.parallaxviewholder.structs.DumpStruct
 import com.hmju.parallaxviewholder.structs.ParallaxStruct
 import java.util.*
