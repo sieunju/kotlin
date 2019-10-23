@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hmju.parallaxviewholder.adapters.BaseAdapter
 import com.hmju.parallaxviewholder.adapters.DumpAdapter
+import com.hmju.parallaxviewholder.decoration.StickyItemDecoration
 import com.hmju.parallaxviewholder.structs.ParallaxStruct
 
 /**
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         mRvContents.layoutManager = LinearLayoutManager(mContext)
         mAdapter.dumpData()
 
+        mRvContents.addItemDecoration(StickyItemDecoration(mContext))
         mRvContents.adapter = mAdapter
     }
 
