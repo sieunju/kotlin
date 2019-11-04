@@ -44,7 +44,7 @@ class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerVie
     private val mStickyHeight: Int by lazy {
         mContext.resources.getDimensionPixelOffset(R.dimen.parallax_height_title_bottom)
     }
-    private val mStickyLocation: Int by lazy{
+    private val mStickyLocation: Int by lazy {
         (mContext.resources.getDimensionPixelOffset(R.dimen.parallax_height_title_bottom)
                 - mContext.resources.getDimensionPixelOffset(R.dimen.parallax_height_max))
     }
@@ -137,7 +137,7 @@ class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerVie
                  *  고정으로 하고 싶은 범위 부터 ParallaxViewHolder 맨 위까지.
                  *  AS-IS if(mStickyLocation < view.top && view.top <= mStickyHeight)
                  */
-                if(view.top in (mStickyLocation + 1)..mStickyHeight){
+                if (view.top in (mStickyLocation + 1)..mStickyHeight) {
                     isMove = true
                     Log.d(TAG, "View Tag\t${view.tag} \t V Top\t${view.top}")
                     moveSticky(c, view)
@@ -201,7 +201,7 @@ class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerVie
      * @param parallaxView -> ParallaxViewHolder View.
      * @author hmju
      */
-    private fun moveSticky(c: Canvas,@NonNull parallaxView: View?) {
+    private fun moveSticky(c: Canvas, @NonNull parallaxView: View?) {
         if (parallaxView == null || mStickyRoot == null) return
         c.save()
         c.translate(0F, (parallaxView.top - mStickyHeight).toFloat())
