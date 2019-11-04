@@ -4,7 +4,11 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
 import android.graphics.drawable.Drawable
+import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
 import androidx.annotation.NonNull
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +25,9 @@ import com.hmju.parallaxviewholder.R
  */
 class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerView.ItemDecoration() {
 
+    private val TAG: String = javaClass.simpleName
+
+    // [s] Divider Variable Info
     private val mDivider: Drawable by lazy {
         ContextCompat.getDrawable(
             mContext,
@@ -28,6 +35,31 @@ class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerVie
         ) as Drawable
     }
     private val mBounds: Rect = Rect()
+    // [e] Divider Variable Info
+
+    // [s] Sticky Variable Info
+    private var mStickyId: Int = -1 // Required Variable.
+    private var mStickyRoot: View? = null
+    private var mTvStickyTitle: TextView? = null
+    private val mStickyHeight: Int by lazy {
+        mContext.resources.getDimensionPixelOffset(R.dimen.parallax_height_title_bottom)
+    }
+    private val mStickyLocation: Int by lazy{
+        (mContext.resources.getDimensionPixelOffset(R.dimen.parallax_height_title_bottom)
+                - mContext.resources.getDimensionPixelOffset(R.dimen.parallax_height_max))
+    }
+    // [e] Sticky Variable Info
+
+    /**
+     * set Func.
+     * 스티커로 표현하고 싶은 View Id
+     * @param id View Id
+     * @author hmju
+     */
+    fun setStickyViewId(id: Int): StickyItemDecoration {
+        mStickyId = id
+        return this
+    }
 
     override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         c.save()
@@ -78,6 +110,116 @@ class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerVie
     }
 
     override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
-        super.onDrawOver(c, parent, state)
+        // initStickyView
+        if (mStickyRoot == null) {
+            mStickyRoot = initStickyView(parent)
+            fixLayoutSize(mStickyRoot, parent)
+        }
+
+        var isMove = false                  // StickyView 이동 유무에 대한 변수.
+        val cnt: Int = parent.childCount    // View Count.
+
+        // 0 ~ cnt 까지.
+        for (i in 0 until cnt) {
+            // Null 인경우 다음 반복문
+            val view: View = parent.getChildAt(i) ?: continue
+
+            // 스티커 ID를 가진 View 인경우.
+            if (view.id == mStickyId) {
+                mTvStickyTitle?.text = view.tag.toString()
+
+                /**
+                 *  아래 로직 범위 설명.                 ↑
+                 *  |||||||||||||||||||||||||||||||||| ↑
+                 *  |||||||ParallaxViewHolder||||||||| ↕
+                 *  |||||||||||||||||||||||||||||||||| ↓
+                 *  ■■■■■■■ Sticky Bottom Area ■■■■■■■ X
+                 *  고정으로 하고 싶은 범위 부터 ParallaxViewHolder 맨 위까지.
+                 *  AS-IS if(mStickyLocation < view.top && view.top <= mStickyHeight)
+                 */
+                if(view.top in (mStickyLocation + 1)..mStickyHeight){
+                    isMove = true
+                    Log.d(TAG, "View Tag\t${view.tag} \t V Top\t${view.top}")
+                    moveSticky(c, view)
+                    break
+                }
+
+            }
+        }
+
+        // Sticky Not Move.
+        if (!isMove) {
+            drawSticky(c, mStickyRoot)
+        }
+    }
+
+    /**
+     * init StickyView
+     * @param parent RecyclerView ViewGroup.
+     * @author hmju
+     */
+    private fun initStickyView(parent: RecyclerView): View {
+        val rootView: View =
+            LayoutInflater.from(mContext).inflate(R.layout.view_parallax_sticky, parent, false)
+        mTvStickyTitle = rootView.findViewById(R.id.tv_sticky_title)
+        return rootView
+    }
+
+    /**
+     * Sticky Layout Fix Func.
+     * RecyclerView 위에 StickyView 를 플로팅처럼 띄우기 위해 Layout 크기를 고정으로 해야함.
+     * StickyView init 할때만 실행하면 된다.
+     * @param view -> StickyView
+     * @param parent -> RecyclerView
+     * @author hmju
+     */
+    private fun fixLayoutSize(view: View?, parent: ViewGroup) {
+        if (view == null) return
+
+        val widthSpec: Int =
+            View.MeasureSpec.makeMeasureSpec(parent.width, View.MeasureSpec.EXACTLY)
+        val heightSpec: Int =
+            View.MeasureSpec.makeMeasureSpec(parent.height, View.MeasureSpec.UNSPECIFIED)
+        val childWidth: Int = ViewGroup.getChildMeasureSpec(
+            widthSpec,
+            parent.paddingLeft + parent.paddingRight,
+            view.layoutParams.width
+        )
+        val childHeight: Int = ViewGroup.getChildMeasureSpec(
+            heightSpec,
+            parent.paddingTop + parent.paddingBottom,
+            view.layoutParams.height
+        )
+
+        view.measure(childWidth, childHeight)
+        view.layout(0, 0, view.measuredWidth, view.measuredHeight)
+    }
+
+    /**
+     * Move Sticky Func.
+     * @param c -> RecyclerView Canvas.
+     * @param parallaxView -> ParallaxViewHolder View.
+     * @author hmju
+     */
+    private fun moveSticky(c: Canvas,@NonNull parallaxView: View?) {
+        if (parallaxView == null || mStickyRoot == null) return
+        c.save()
+        c.translate(0F, (parallaxView.top - mStickyHeight).toFloat())
+        mStickyRoot?.draw(c)
+        c.restore()
+    }
+
+    /**
+     * Canvas Top Draw func.
+     * @param c -> RecyclerView Canvas
+     * @param view -> StickyView
+     * @author hmju
+     */
+    private fun drawSticky(c: Canvas, view: View?) {
+        if (view == null) return
+        c.save()
+        c.translate(0F, 0F)
+        view.draw(c)
+        c.restore()
     }
 }

@@ -25,6 +25,7 @@ class ParallaxViewHolder(itemView: View, private val mViewGroup: ViewGroup) :
 
     private val TAG: String = "ParallaxViewHolder"
 
+    private val mRoot: ConstraintLayout by lazy{ mRootView.findViewById<ConstraintLayout>(R.id.root_v_parallax)}
     // 전체 ViewHolder 높이에 대한 레이아웃.
     private val mClRoot: ConstraintLayout by lazy { mRootView.findViewById<ConstraintLayout>(R.id.cl_root) }
     // 가운데 영역
@@ -103,6 +104,7 @@ class ParallaxViewHolder(itemView: View, private val mViewGroup: ViewGroup) :
     private fun bindView(data: ParallaxStruct) {
         mTvCenterTitle.text = data.title
         mTvBottomTitle.text = String.format("Chapter%s",data.title)
+        mRoot.tag = String.format("Chapter%s",data.title)
     }
 
     /**

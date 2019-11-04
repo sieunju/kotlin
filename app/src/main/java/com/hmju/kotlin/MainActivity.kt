@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         mRvContents.layoutManager = LinearLayoutManager(mContext)
         mAdapter.dumpData()
 
-        mRvContents.addItemDecoration(StickyItemDecoration(mContext))
+        mRvContents.addItemDecoration(StickyItemDecoration(mContext).setStickyViewId(R.id.root_v_parallax))
         mRvContents.adapter = mAdapter
     }
 
