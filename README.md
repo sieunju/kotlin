@@ -153,7 +153,7 @@ CustomProgressView Module > res > values > attrs.xml
 ```
 
 # Parallaxviewholder
-
+ 
 ## Description
 RecyclerView 에서 사용자가 원하는 위치에 따라서 ReDraw 를 표현할수 있는 라이브러리 입니다.
 - Example GIF
@@ -171,4 +171,4 @@ ParallaxViewHolder Module 에서 ParallaxViewHolder 만 가져와서 사용자 �
     시작 지점에서 끝지점까지 Percentage 로 나타냅니다. (0.0~1.0)
 - bindView          사용자 원하는 대로 변경하시면 되겠습니다.
 - bindAlpha         이 함수에서 사용자가 나타내고 싶은 Alpha 값을 변경하면 되겠습니다.
-  (단, R.layout.view_holder_parallax.xml 에서 알맞게 수정 하셔야 합니다.)
+  (단, R.layout.view_holder_parallax.xml 에서 알맞게 수정 하셔야 합니다.) 
