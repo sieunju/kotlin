@@ -157,7 +157,7 @@ CustomProgressView Module > res > values > attrs.xml
 ## Description
 RecyclerView 에서 사용자가 원하는 위치에 따라서 ReDraw 를 표현할수 있는 라이브러리 입니다.
 - Example GIF
-![예제](https://user-images.githubusercontent.com/33802191/67152949-670bbd80-f31b-11e9-87ea-7163f26c187b.gif)
+![example](https://user-images.githubusercontent.com/33802191/67152949-670bbd80-f31b-11e9-87ea-7163f26c187b.gif)
 
 ## HOW TO
 ParallaxViewHolder Module 에서 ParallaxViewHolder 만 가져와서 사용자 환경에 맞게 세팅 하시면 됩니다. 나머지 BaseAdapter, BaseViewHolder...은 테스트 영상을 위해서 추가된 클래스입니다. 
