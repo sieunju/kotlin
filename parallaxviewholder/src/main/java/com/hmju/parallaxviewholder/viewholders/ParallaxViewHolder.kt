@@ -55,7 +55,7 @@ class ParallaxViewHolder(itemView: View, private val mViewGroup: ViewGroup) :
     private var mCalculation: Float = 0f            // MaxHeight - MinHeight Value (Dpi)
     private var mIsExpands: Boolean = false         // Child ViewHolder Action Status
 
-    private val mViewInfoList: SparseIntArray by lazy { SparseIntArray() }
+    public val mViewInfoList: SparseIntArray by lazy { SparseIntArray() }
 
     companion object {
 
@@ -104,7 +104,7 @@ class ParallaxViewHolder(itemView: View, private val mViewGroup: ViewGroup) :
     private fun bindView(data: ParallaxStruct) {
         mTvCenterTitle.text = data.title
         mTvBottomTitle.text = String.format("Chapter%s",data.title)
-        mRoot.tag = String.format("Chapter%s",data.title)
+        mRoot.tag = String.format("Chapter%s Pos%d",data.title,adapterPosition)
     }
 
     /**

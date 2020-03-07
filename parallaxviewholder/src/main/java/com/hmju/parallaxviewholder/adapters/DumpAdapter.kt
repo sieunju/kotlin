@@ -25,11 +25,12 @@ class DumpAdapter(context: Context) : BaseAdapter(context) {
     }
 
     fun dumpData() {
+        var cnt = 1
         for (i in 1..29) {
-            if (i % 2 == 0) {
-                mItems.add(ItemStruct(ParallaxStruct("시즌$i"), TYPE_PARALLAX))
+            if (i != 0 && i % 2 == 0) {
+                mItems.add(ItemStruct(ParallaxStruct("시즌${cnt++}"), TYPE_PARALLAX))
             } else {
-                mItems.add(ItemStruct(DumpStruct("Title$i"), TYPE_DUMP))
+                mItems.add(ItemStruct(DumpStruct("Title"), TYPE_DUMP))
             }
         }
     }

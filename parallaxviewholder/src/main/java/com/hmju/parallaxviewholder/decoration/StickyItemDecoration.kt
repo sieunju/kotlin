@@ -10,10 +10,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.NonNull
+import androidx.annotation.Nullable
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.NO_POSITION
 import com.hmju.parallaxviewholder.R
+import com.hmju.parallaxviewholder.viewholders.ParallaxViewHolder
 
 /**
  * kotlin_github_branch
@@ -142,8 +144,9 @@ class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerVie
                     Log.d(TAG, "View Tag\t${view.tag} \t V Top\t${view.top}")
                     moveSticky(c, view)
                     break
+                } else {
+                    Log.d(TAG,"View Top\t${view.top}")
                 }
-
             }
         }
 
@@ -169,8 +172,8 @@ class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerVie
      * Sticky Layout Fix Func.
      * RecyclerView 위에 StickyView 를 플로팅처럼 띄우기 위해 Layout 크기를 고정으로 해야함.
      * StickyView init 할때만 실행하면 된다.
-     * @param view -> StickyView
-     * @param parent -> RecyclerView
+     * @param view      -> StickyView
+     * @param parent    -> RecyclerView
      * @author hmju
      */
     private fun fixLayoutSize(view: View?, parent: ViewGroup) {
@@ -201,8 +204,8 @@ class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerVie
      * @param parallaxView -> ParallaxViewHolder View.
      * @author hmju
      */
-    private fun moveSticky(c: Canvas, @NonNull parallaxView: View?) {
-        if (parallaxView == null || mStickyRoot == null) return
+    private fun moveSticky(c: Canvas, @NonNull parallaxView: View) {
+        if (mStickyRoot == null) return
         c.save()
         c.translate(0F, (parallaxView.top - mStickyHeight).toFloat())
         mStickyRoot?.draw(c)
@@ -215,8 +218,8 @@ class StickyItemDecoration(@NonNull private val mContext: Context) : RecyclerVie
      * @param view -> StickyView
      * @author hmju
      */
-    private fun drawSticky(c: Canvas, view: View?) {
-        if (view == null) return
+    private fun drawSticky(c: Canvas,@Nullable view: View?) {
+        if(view == null) return
         c.save()
         c.translate(0F, 0F)
         view.draw(c)
