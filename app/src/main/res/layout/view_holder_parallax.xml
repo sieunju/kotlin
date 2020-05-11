@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root_v_parallax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_root"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/parallax_height_min"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+                android:id="@+id/img_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/temp_img4" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:alpha="1"
+                android:background="#80000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <!-- 가운데 텍스트뷰 Alpha 1.0 -> 0.0 -->
+            <TextView
+                    android:id="@+id/tv_center_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#CC000000"
+                    android:shadowDx="5.0"
+                    android:shadowDy="5.0"
+                    android:shadowRadius="2"
+                    android:text="Hello hmJu"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/size_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Hello hmJu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!-- 아래 텍스트 나타내는 Layout Alpha 0.0 -> 1.0 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/parallax_height_title_bottom"
+                android:alpha="0"
+                android:background="#CC000000"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- 아래 텍스트 뷰 Alpha 0.0 -> 1.0 -->
+            <TextView
+                    android:id="@+id/tv_bottom_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#CC000000"
+                    android:shadowDx="5.0"
+                    android:shadowDy="5.0"
+                    android:shadowRadius="2"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/size_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Bye hmJu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
