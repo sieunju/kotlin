@@ -46,7 +46,6 @@ abstract class BaseAdapter(protected var mContext: Context) : RecyclerView.Adapt
             is AppleViewHolder -> holder.onBindView(pos, data as AppleStruct)
             is OrangeViewHolder -> holder.onBindView(pos, data as OrangeStruct)
             is GrapeViewHolder -> holder.onBindView(pos, data as GrapeStruct)
-            is ResizeViewHolder -> holder.onBindView(pos, data as ResizeStruct)
             is ParallaxViewHolder -> holder.onBindView(pos, data as ResizeStruct)
             else -> throw IllegalArgumentException("Invalid ViewHolder. Add BaseAdapter onBindViewHolder")
         }

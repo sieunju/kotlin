@@ -2,10 +2,10 @@ package com.hmju.kotlin.adapters
 
 import android.content.Context
 import android.view.ViewGroup
+import com.hmju.kotlin.dataModels.BaseResponseData
+import com.hmju.kotlin.dataModels.DynamicStruct
 import com.hmju.kotlin.utils.Logger
 import com.hmju.kotlin.viewholders.*
-import com.kotlinstudy.structs.BaseResponseData
-import com.kotlinstudy.structs.DynamicStruct
 
 /**
  * kotlinStudy

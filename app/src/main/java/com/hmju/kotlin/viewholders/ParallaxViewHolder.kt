@@ -8,8 +8,7 @@ import android.view.*
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.hmju.kotlin.R
-import com.hmju.kotlin.viewholders.BaseViewHolder
-import com.kotlinstudy.structs.ResizeStruct
+import com.hmju.kotlin.dataModels.ResizeStruct
 import kotlin.math.abs
 import kotlin.math.ceil
 
