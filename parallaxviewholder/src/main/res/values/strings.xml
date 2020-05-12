@@ -1,11 +1,7 @@
 <resources>
-    <string name="app_name">kotlin</string>
+    <string name="app_name">ParallaxViewHolder</string>
 
-    <string name="appbar_scrolling_view_behavior">
-        com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior
-    </string>
-
-    <string name="large_text">
+    <string name="str_large_text">
         MIT License\n\n
 
         Copyright (c) 2019 Sieun Ju\n\n
@@ -27,6 +23,5 @@
         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-        SOFTWARE.
-    </string>
+        SOFTWARE.</string>
 </resources>

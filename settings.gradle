@@ -1,1 +1,1 @@
-include ':app', ':custombehavior', ':customprogressview'
+include ':app', ':custombehavior', ':customprogressview', ':parallaxviewholder'
