@@ -1,7 +1,5 @@
 package com.hmju.kotlin.dataModels
 
-import com.kotlinstudy.structs.*
-
 /**
  * kotlinStudy
  * Class: DynamicStruct

@@ -2,17 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:ignore="missingPrefix">
+    android:background="@color/color_2196F3">
 
-    <LinearLayout
-        android:id="@+id/ll_select"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/size_20"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="One Fragment" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

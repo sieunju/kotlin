@@ -22,4 +22,10 @@ class AppleStruct : Serializable {
         set(value) {
             field = if (value.isNotEmpty()) value else ""
         }
+
+    var test: Boolean = false
+        get() = title != null
+        set(value) {
+            field = value
+        }
 }

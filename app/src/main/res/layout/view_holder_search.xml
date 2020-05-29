@@ -3,16 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:ignore="missingPrefix">
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/size_5"
+    android:paddingBottom="@dimen/size_5">
 
-    <LinearLayout
-        android:id="@+id/ll_select"
+    <TextView
+        android:id="@+id/tv_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="@dimen/size_5"
+        android:layout_marginLeft="@dimen/size_5"
+        android:textColor="@color/color_e4e4e4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="아로하~" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,4 +29,9 @@
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
     </string>
+
+    <!-- Firebase Cloud Messaging -->
+    <string name="notification_channel_id">Message</string>
+    <string name="notification_channel_name">메시지</string>
+
 </resources>

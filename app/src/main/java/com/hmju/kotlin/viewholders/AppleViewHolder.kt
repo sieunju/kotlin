@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.hmju.kotlin.R
-import com.kotlinstudy.structs.AppleStruct
+import com.hmju.kotlin.dataModels.AppleStruct
 
 /**
  * kotlinStudy
