@@ -76,7 +76,6 @@ class ClientUtil {
             val origin: Request = chain.request()
 
             val request: Request = origin.newBuilder()
-                .header("loginKey","U2FsdGVkX1/NDGFkpeyxN5Kyl5c+wMFzFbqe+EpzLm4=")
                 .header(REQUEST_ACCEPT, VALUE_ACCEPT)
                 .method(origin.method(), origin.body())
                 .build()
